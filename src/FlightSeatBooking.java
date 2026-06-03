@@ -70,7 +70,21 @@ public class FlightSeatBooking {
             }
             if (!found) {
                 System.out.println("Seat Not Found!");
+            }else if (choice == 3) {
+
+                if (list.isEmpty()) {
+                    System.out.println("No Bookings Yet!");
+                }
+                else {
+
+                    System.out.println("\n--- Passenger List ---");
+
+                    for (int i = 0; i < list.size(); i++) {
+                        list.get(i).display();
+                    }
+                }
             }
+
         }
     }
 }
