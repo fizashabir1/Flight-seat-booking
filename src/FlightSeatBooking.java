@@ -83,8 +83,28 @@ public class FlightSeatBooking {
                         list.get(i).display();
                     }
                 }
+
             }
 
+        }else if (choice == 4) {
+
+            System.out.print("Enter Seat Number: ");
+            int seatNo = input.nextInt();
+
+            boolean found = false;
+
+            for (int i = 0; i < list.size(); i++) {
+
+                if (list.get(i).seatNo == seatNo) {
+                    list.get(i).display();
+                    found = true;
+                    break;
+                }
+            }
+
+            if (!found) {
+                System.out.println("Passenger Not Found!");
+            }
         }
     }
 }
