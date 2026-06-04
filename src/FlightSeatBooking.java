@@ -76,7 +76,6 @@ public class FlightSeatBooking {
                     System.out.println("No Bookings Yet!");
                 }
                 else {
-
                     System.out.println("\n--- Passenger List ---");
 
                     for (int i = 0; i < list.size(); i++) {
@@ -85,14 +84,10 @@ public class FlightSeatBooking {
                 }
 
             }
-
         }else if (choice == 4) {
-
             System.out.print("Enter Seat Number: ");
             int seatNo = input.nextInt();
-
             boolean found = false;
-
             for (int i = 0; i < list.size(); i++) {
 
                 if (list.get(i).seatNo == seatNo) {
@@ -101,10 +96,14 @@ public class FlightSeatBooking {
                     break;
                 }
             }
-
             if (!found) {
                 System.out.println("Passenger Not Found!");
             }
+        }else if (choice == 5) {
+            System.out.println("Program Ended!");
+        }
+        else {
+            System.out.println("Invalid Choice!");
         }
     }
 }
